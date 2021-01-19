@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-prompt)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,7 +103,8 @@ alias v="nvim"
 alias :q="exit"
 
 # show git info in prompt
-source $HOME/dotfiles/zsh-git-prompt/zshrc.sh
+#source $HOME/dotfiles/zsh-git-prompt/zshrc.sh
+source $HOME/.oh-my-zsh/plugins/git-prompt/git-prompt.plugin.zsh
 PROMPT='%B%m%~%b$(git_super_status) %# '
 #GIT_PROMPT_EXECUTABLE="haskell"
 
