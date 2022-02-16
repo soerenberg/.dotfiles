@@ -151,6 +151,11 @@ nnoremap <C-w><bar> <esc>:vsplit<CR>
 " NERDtree commands
 nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 
+" Fugitive Conflict Resolution
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
+
 " reformat using yapf in python files
 " autocmd FileType python nnoremap <LocalLeader
 map <C-Y> :call yapf#YAPF()<cr>
