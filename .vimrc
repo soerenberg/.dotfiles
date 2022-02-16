@@ -65,6 +65,8 @@ let g:rainbow_ctermfgs = [244, 136, 166, 160, 37, 64]
 let g:rainbow_guifgs = ['brblue', 'yellow', 'brred', 'red', 'cyan', 'green']
 "#808080, #af8700, #d75f00, #d70000, #00afaf, #5f8700]
 
+" FZF shortcut
+nnoremap <silent> <C-p> :Files<CR>
 
 syntax enable
 colorscheme solarized
