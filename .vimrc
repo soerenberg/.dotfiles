@@ -184,7 +184,8 @@ let g:ale_python_pylint_executable = 'pylint3'
 :set colorcolumn=80
 
 " Haskell configurations
-autocmd FileType haskell setlocal colorcolumn=78
+autocmd FileType haskell setlocal colorcolumn=80 tabstop=2
+autocmd FileType haskell setlocal tabstop=2
 " See https://github.com/jaspervdj/stylish-haskell/
 noremap <leader>f :%!stylish-haskell
 
