@@ -83,6 +83,7 @@ set smarttab
 set expandtab
 set smartindent
 set ruler
+set number
 set relativenumber
 set ttyfast
 set autoread
