@@ -43,6 +43,12 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'puremourning/vimspector'
 
+" The following is used for google code formatter (:FormatLines, :FormatCode)
+" (required apt-get install clang-format)
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+
 call plug#end()
 
 " " Note: install xclip inorder to have working clipboard support in neovim
