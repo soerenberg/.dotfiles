@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/berg/.oh-my-zsh"
+export ZSH="/Users/soeren/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -131,4 +131,4 @@ zle -N zle-keymap-select
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
-alias config='/usr/bin/git --git-dir=/home/berg/.cfg-git/ --work-tree=/home/berg'
+alias config='/usr/bin/git --git-dir=/Users/soeren/.cfg/ --work-tree=/Users/soeren'
