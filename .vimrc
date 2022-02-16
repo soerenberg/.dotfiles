@@ -12,6 +12,7 @@ Plug 'google/yapf', { 'rtp': 'plugins/vim' }
 Plug 'jalvesaq/Nvim-R'
 Plug 'eigenfoo/stan-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-pyright'
 Plug 'ntpeters/vim-better-whitespace' " better alternative to vim-trailing-whitespace
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
