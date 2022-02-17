@@ -11,8 +11,10 @@ Plug 'tpope/vim-rhubarb'
 Plug 'google/yapf', { 'rtp': 'plugins/vim' }
 Plug 'jalvesaq/Nvim-R'
 Plug 'eigenfoo/stan-vim'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-pyright'
 Plug 'ntpeters/vim-better-whitespace' " better alternative to vim-trailing-whitespace
+Plug 'davidhalter/jedi-vim' " autocompletion
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -41,6 +43,12 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'puremourning/vimspector'
 
+" The following is used for google code formatter (:FormatLines, :FormatCode)
+" (required apt-get install clang-format)
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+
 call plug#end()
 
 " " Note: install xclip inorder to have working clipboard support in neovim
@@ -57,6 +65,8 @@ let g:rainbow_ctermfgs = [244, 136, 166, 160, 37, 64]
 let g:rainbow_guifgs = ['brblue', 'yellow', 'brred', 'red', 'cyan', 'green']
 "#808080, #af8700, #d75f00, #d70000, #00afaf, #5f8700]
 
+" FZF shortcut
+nnoremap <silent> <C-p> :Files<CR>
 
 syntax enable
 colorscheme solarized
@@ -73,6 +83,7 @@ set smarttab
 set expandtab
 set smartindent
 set ruler
+set number
 set relativenumber
 set ttyfast
 set autoread
@@ -126,10 +137,7 @@ autocmd VimResized * wincmd =
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
-let maplocalleader = ","
-let g:maplocalleader = ","
+let mapleader = " "
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -143,6 +151,11 @@ nnoremap <C-w><bar> <esc>:vsplit<CR>
 
 " NERDtree commands
 nnoremap <silent> <C-t> :NERDTreeToggle<CR>
+
+" Fugitive Conflict Resolution
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
 
 " reformat using yapf in python files
 " autocmd FileType python nnoremap <LocalLeader
@@ -172,7 +185,8 @@ let g:ale_python_pylint_executable = 'pylint3'
 :set colorcolumn=80
 
 " Haskell configurations
-autocmd FileType haskell setlocal colorcolumn=78
+autocmd FileType haskell setlocal colorcolumn=80 tabstop=2
+autocmd FileType haskell setlocal tabstop=2
 " See https://github.com/jaspervdj/stylish-haskell/
 noremap <leader>f :%!stylish-haskell
 
