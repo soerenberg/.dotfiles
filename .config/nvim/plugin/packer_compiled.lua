@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/soeren/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  pinkmare = {
+    loaded = true,
+    path = "/Users/soeren/.local/share/nvim/site/pack/packer/start/pinkmare",
+    url = "https://github.com/matsuuu/pinkmare"
+  },
   playground = {
     loaded = true,
     path = "/Users/soeren/.local/share/nvim/site/pack/packer/start/playground",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/soeren/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  vim = {
+    loaded = true,
+    path = "/Users/soeren/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/catppuccin/vim"
   },
   ["vim-better-whitespace"] = {
     loaded = true,

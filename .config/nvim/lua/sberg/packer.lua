@@ -28,7 +28,11 @@ return require('packer').startup(function(use)
   use('tpope/vim-commentary')
   use('ntpeters/vim-better-whitespace')
   use('scrooloose/nerdtree')
+
+  -- colorschemes
   use('altercation/vim-colors-solarized')
+  use('catppuccin/vim', { as = 'catppuccin' })
+  use('matsuuu/pinkmare')
   use('chriskempson/base16-vim')
   -- use('shaunsingh/solarized.nvim')
   use('frazrepo/vim-rainbow')
