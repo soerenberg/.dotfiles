@@ -8,3 +8,8 @@ vim.keymap.set("i", "<c-u>", "<esc>b<c-v>eUea")
 vim.keymap.set("n", "<leader>gh", ":diffget //3<CR>")
 vim.keymap.set("n", "<leader>gu", ":diffget //2<CR>")
 vim.keymap.set("n", "<leader>gs", ":G<CR>")
+
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
