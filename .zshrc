@@ -131,4 +131,28 @@ zle -N zle-keymap-select
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
+export PATH="$HOME/.local/bin:$PATH"
+
 alias config='/usr/bin/git --git-dir=/Users/soeren/.cfg/ --work-tree=/Users/soeren'
+alias ll="ls -l -G"
+alias notif='~/Documents/learning/shell-scripts/notif.sh'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/soeren/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/soeren/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/soeren/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/soeren/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+conda config --set auto_activate_base false
+# <<< conda initialize <<<
+
+
+[ -f "/Users/soeren/.ghcup/env" ] && source "/Users/soeren/.ghcup/env" # ghcup-env

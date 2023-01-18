@@ -28,6 +28,20 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ["<C-Space>"] = cmp.mapping.complete(),
 })
 
+cmp_mappings['<CR>'] = nil
+
+lsp.setup_nvim_cmp({
+    mapping = cmp_mappings
+})
+
+cmp.setup({
+    enabled = true,
+    preselect = cmp.PreselectMode.None,
+    sources = {
+        {name = 'nvim_lsp'}
+    }
+})
+
 lsp.configure('pyright', {
   single_file_support = false
 })

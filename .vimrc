@@ -11,15 +11,15 @@ Plug 'tpope/vim-rhubarb'
 Plug 'google/yapf', { 'rtp': 'plugins/vim' }
 Plug 'jalvesaq/Nvim-R'
 Plug 'eigenfoo/stan-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-Plug 'fannheyward/coc-pyright'
 Plug 'ntpeters/vim-better-whitespace' " better alternative to vim-trailing-whitespace
-Plug 'davidhalter/jedi-vim' " autocompletion
+" Plug 'davidhalter/jedi-vim' " autocompletion
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 Plug 'altercation/vim-colors-solarized'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'matsuuu/pinkmare'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
